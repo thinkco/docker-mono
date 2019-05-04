@@ -3,7 +3,7 @@ FROM ubuntu:trusty as build
 ARG MONO_VERSION=3.12.1
 
 RUN apt -qq update && apt -qq upgrade -y && \
-    apt -qq install -y wget build-essential gettext file && \
+    apt -qq install -y wget git autoconf libtool automake build-essential gettext cmake python file && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/local/src
