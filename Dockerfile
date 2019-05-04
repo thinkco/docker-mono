@@ -14,3 +14,5 @@ WORKDIR /usr/local/src/mono-$MONO_VERSION
 RUN ./configure --prefix=/usr/local
 RUN make
 RUN make install
+
+ENTRYPOINT ["/usr/local/bin/mono"]
