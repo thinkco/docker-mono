@@ -16,6 +16,7 @@ RUN make
 RUN make install
 
 WORKDIR /mono
-RUN rm -Rf /usr/local/src/mono-$MONO_VERSION
+RUN rm -rf /usr/local/src/mono-$MONO_VERSION
+RUN rm -rf /tmp/*
 
 ENTRYPOINT ["/usr/local/bin/mono"]
